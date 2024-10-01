@@ -53,7 +53,7 @@
           </div>
         </section>
 
-        <section class="features-section">
+        <section id="how-it-works" class="features-section">
           <div class="features-grid">
             <article class="feature-card">
               <div class="feature-content">
@@ -284,15 +284,14 @@
               effortless as possible.
             </p>
           </div>
-          <div class="cta-section">
-            <p class="cta-subtitle">
-              Ready to transform your learning experience?
-            </p>
-            <h2 class="cta-title">Sign up</h2>
-            <div class="cta-button-wrapper">
-              <button class="cta-button-about">Join waitlist</button>
-            </div>
-          </div>
+          <section class="signup-row">
+            <p class="signup-subtitle">Ready to transform your learning experience?</p>
+            <h2 class="signup-title">Sign up</h2>
+            <form class="signup-form">
+              <label for="waitlistInput" class="visually-hidden">Join waitlist</label>
+              <button type="submit" class="signup-button" id="waitlistInput">Join waitlist</button>
+            </form>
+          </section>
         </section>
       </main>
 
@@ -301,14 +300,41 @@
           <div class="footer-content">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/c4129cc9fbd6f80e8dc37a877dbc2fddb58316a95f43f38b36664cd78687ca5c?placeholderIfAbsent=true&apiKey=84d2ef1373624ecf922793cebb6c4ef3"
-              alt="Dailo footer logo"
+              alt="Dailo logo"
               class="footer-logo"
               loading="lazy"
             />
+            <div class="footer-links">
+              <a href="#contact" class="footer-link">Contact Us</a>
+              <a href="#terms" class="footer-link">Terms & Privacy</a>
+            </div>
             <p class="footer-text">© 2024 Dailo. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </section>
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var navigation = document.querySelector('.navigation');
+      var isHomePage = true; // Set this to true for the home page, false for other pages
+      var scrollTimeout;
+
+      // Show navigation immediately on the home page
+      if (isHomePage) {
+        navigation.classList.add('visible');
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!isHomePage) {
+          clearTimeout(scrollTimeout);
+          navigation.classList.add('visible');
+
+          scrollTimeout = setTimeout(function() {
+            navigation.classList.remove('visible');
+          }, 2000); // Hide after 2 seconds of inactivity
+        }
+      });
+    });
+  </script>
 </html>
