@@ -251,37 +251,49 @@ body {
 @media (max-width: 1200px) {
   .logo-container {
     width: 480px; /* Adjust width for screens smaller than 1200px */
+    margin-top: 20%;
   }
 }
 
 @media (max-width: 991px) {
   .logo-container {
     width: 360px; /* Adjust width for screens smaller than 991px */
+    margin-top: 25%;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo-container {
+    width: 300px; /* Adjust width for screens smaller than 768px */
+    margin-top: 38%;
   }
 }
 
 @media (max-width: 768px) {
   .logo-container {
     width: 240px; /* Adjust width for screens smaller than 768px */
+    margin-top: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-container {
+    width: 260px; /* Adjust width for screens smaller than 768px */
+    margin-top: 50%;
   }
 }
 
 @media (max-width: 480px) {
   .logo-container {
-    width: 180px; /* Adjust width for screens smaller than 480px */
+    width: 220px; /* Adjust width for screens smaller than 480px */
+    margin-top: 55%;
   }
 }
 
 @media (max-width: 320px) {
   .logo-container {
-    width: 120px; /* Adjust width for screens smaller than 320px */
-  }
-}
-
-@media (max-width: 991px) {
-  .logo-container {
-    margin-top: 20px; /* Adjust margin for spacing */
-    max-width: 100%;
+    width: 200px; /* Adjust width for screens smaller than 320px */
+    margin-top: 45%;
   }
 }
 
@@ -719,7 +731,7 @@ body {
 .mission-section {
   align-self: center;
   color: #000;
-  margin-top: 224px; /* Adjust margin for spacing */
+  margin-top: 224px;
   max-width: 100%;
 }
 
@@ -727,20 +739,12 @@ body {
   display: flex;
   align-items: start;
   flex-direction: column;
-
   width: 100%;
   max-width: 100%;
 }
 
-@media (max-width: 991px) {
-  .mission-content {
-    max-width: 100%;
-  }
-}
-
 .mission-grid {
   align-items: start;
-
   flex-direction: row;
   gap: 40px 100px;
   justify-content: space-between;
@@ -748,51 +752,113 @@ body {
   max-width: 100%;
 }
 
-@media (max-width: 991px) {
-  .mission-grid {
-    max-width: 100%;
-  }
-}
-
 .mission-items {
-  align-items: start;
   display: flex;
   flex-wrap: wrap;
   font-family: Geist, sans-serif;
-  gap: 40px 132px;
-  justify-content: start;
+  gap: 40px 60px;
+  justify-content: center;
   min-width: 240px;
   max-width: 100%;
 }
 
-@media (max-width: 991px) {
-  .mission-items {
-    max-width: 100%;
-  }
-}
-
-.mission-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 624px;
-  width: 229px;
-  max-width: 100%;
-}
-
+.mission-item,
 .our-mission {
   width: 229px;
   max-width: 100%;
+  margin-right: 30px;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   justify-content: space-between;
-  height: 100%;
 }
 
-.mission-summary {
+.mission-group {
+  display: flex;
+  gap: 60px;
+  flex-wrap: nowrap;
 }
 
-.mission-summary-text {
+@media (max-width: 1256px) {
+  .mission-item,
+  .our-mission {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1141px) {
+  .mission-item,
+  .our-mission {
+    width: 180px;
+  }
+}
+
+@media (max-width: 1059px) {
+  .mission-item,
+  .our-mission {
+    width: 160px;
+  }
+}
+
+@media (max-width: 991px) {
+  .mission-item,
+  .our-mission {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .mission-group {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 30px;
+    width: auto;
+  }
+}
+
+@media (max-width: 950px) {
+  .mission-item,
+  .our-mission {
+    width: 30%;
+  }
+
+  .mission-group {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+  
+
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-item,
+  .our-mission {
+    width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .mission-item,
+  .our-mission {
+    width: 30%;
+  }
+
+  .mission-group {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .mission-summary-title {
+    font-size: 38px;
+  }
 }
 
 .mission-header {
@@ -813,9 +879,56 @@ body {
   margin-top: 40px; /* Adjust margin for spacing */
 }
 
+.mission-summary-title {
+    font: 800 61px/1 Inter, sans-serif;
+    letter-spacing: -1.52px;
+    margin-top: 0%;
+    margin-bottom: 2%;
+  }
+  
+  .mission-summary-subtitle {
+    font: 400 20px Geist, sans-serif;
+    margin-top: 0%;
+    margin-bottom: 100%;
+  }
+  
+  .mission-summary-image {
+    aspect-ratio: 0.94;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    width: 362px;
+  }
+
 @media (max-width: 991px) {
+  .mission-summary-title {
+    font-size: 42px;
+  }
+  .mission-summary-subtitle,
+  .mission-description {
+    font-size: 16px;
+  }
+  .mission-number {
+    font-size: 28px;
+  }
   .mission-title {
-    margin-top: 40px; /* Adjust margin for spacing */
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-summary-title {
+    font-size: 38px;
+  }
+  .mission-summary-subtitle,
+  .mission-description {
+    font-size: 14px;
+  }
+  .mission-number {
+    font-size: 24px;
+  }
+  .mission-title {
+    font-size: 16px;
   }
 }
 
@@ -826,37 +939,15 @@ body {
 }
 
 @media (max-width: 991px) {
-  .mission-description {
-    margin-top: 40px; /* Adjust margin for spacing */
-  }
 }
 
-.mission-summary-title {
-  font: 800 61px/1 Inter, sans-serif;
-  letter-spacing: -1.52px;
-  margin-top: 0%;
-  margin-bottom: 2%;
-}
 
-.mission-summary-subtitle {
-  font: 400 20px Geist, sans-serif;
-  margin-top: 0%;
-  margin-bottom: 100%;
-}
-
-.mission-summary-image {
-  aspect-ratio: 0.94;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: center;
-  width: 362px;
-}
 
 .about-section {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin-top: 100px; /* Adjust margin for spacing */
+  margin-top: 160px; /* Adjust margin for spacing */
   padding: 0 32px;
   width: 100%;
 }
@@ -980,7 +1071,7 @@ body {
   width: 1451px;
   max-width: 100%;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   padding: 0 36px;
 }
 
@@ -989,8 +1080,6 @@ body {
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px 100px;
 }
 
 .footer-logo {
@@ -998,23 +1087,44 @@ body {
   object-fit: contain;
   object-position: center;
   width: 111px;
-  align-self: stretch;
-  margin: auto 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-link {
+  color: #a4a9af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #000000;
 }
 
 .footer-text {
-  align-self: stretch;
-  margin: auto 0;
+  text-align: right;
 }
 
-@media (max-width: 991px) {
-  .footer,
+@media (max-width: 768px) {
   .footer-content {
-    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
   }
 
-  .footer-container {
-    padding: 0 20px;
+  .footer-links {
+    order: 2;
+  }
+
+  .footer-text {
+    order: 3;
+    text-align: center;
   }
 }
 
@@ -1062,19 +1172,23 @@ body {
   padding: 0 14px;
 }
 
-.signup-button {
-  align-self: stretch;
-  border-radius: 7px;
-  background-color: rgba(24, 24, 27, 1);
-  min-width: 240px;
-  min-height: 45px;
-  width: 100%;
-  gap: 9px;
-  flex: 1;
-  padding: 12px 18px;
+.signup-button,
+.cta-button {
+  background-color: #000;
   border: none;
+  border-radius: 32px;
+  color: #fff;
+  font: 600 1rem/30px Geist, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
-  color: #ffffff; /* Add this line to ensure white text */
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover,
+.cta-button:hover {
+  background-color: #333;
 }
 
 .visually-hidden {
@@ -1096,29 +1210,132 @@ body {
   }
 }
 
-.footer-links {
-  display: flex;
-  gap: 20px;
+/* Add this at the end of your styles.css file */
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.footer-link {
-  color: #a4a9af;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-.footer-link:hover {
-  color: #000000;
+.popup-image {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto 0.75rem;
 }
 
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.popup h2 {
+  margin-top: 0;
+  color: #000;
+  font: 800 24px/1.2 Inter, sans-serif;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.popup-description {
+  font: 400 14px/1.4 Geist, sans-serif;
+  color: #71717a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.popup input,
+.popup textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: Geist, sans-serif;
+  background-color: #fff;
+  color: #000;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.popup textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.popup button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 32px;
+  background-color: #000;
+  color: #fff;
+  font: 600 0.9rem/1.5 Geist, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .popup {
+    width: 95%;
+    padding: 1rem;
   }
 
-  .footer-links {
-    margin: 20px 0;
+  .popup h2 {
+    font-size: 20px;
   }
+
+  .popup-description {
+    font-size: 12px;
+  }
+
+  .popup input,
+  .popup textarea,
+  .popup button {
+    font-size: 0.8rem;
+  }
+}
+
+.signup-button {
+  align-self: stretch;
+  border-radius: 7px;
+  background-color: rgba(24, 24, 27, 1);
+  min-width: 240px;
+  min-height: 45px;
+  width: 100%;
+  gap: 9px;
+  flex: 1;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font: 600 16px/1 Geist, sans-serif;
+}
+
+.signup-button:hover {
+  background-color: rgba(24, 24, 27, 0.9);
 }
