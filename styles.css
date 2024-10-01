@@ -830,8 +830,6 @@ body {
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
-  
-
   }
 }
 
@@ -843,7 +841,6 @@ body {
 }
 
 @media (max-width: 480px) {
-
   .mission-item,
   .our-mission {
     width: 30%;
@@ -880,25 +877,25 @@ body {
 }
 
 .mission-summary-title {
-    font: 800 61px/1 Inter, sans-serif;
-    letter-spacing: -1.52px;
-    margin-top: 0%;
-    margin-bottom: 2%;
-  }
-  
-  .mission-summary-subtitle {
-    font: 400 20px Geist, sans-serif;
-    margin-top: 0%;
-    margin-bottom: 100%;
-  }
-  
-  .mission-summary-image {
-    aspect-ratio: 0.94;
-    max-width: 100%;
-    object-fit: contain;
-    object-position: center;
-    width: 362px;
-  }
+  font: 800 61px/1 Inter, sans-serif;
+  letter-spacing: -1.52px;
+  margin-top: 0%;
+  margin-bottom: 2%;
+}
+
+.mission-summary-subtitle {
+  font: 400 20px Geist, sans-serif;
+  margin-top: 0%;
+  margin-bottom: 100%;
+}
+
+.mission-summary-image {
+  aspect-ratio: 0.94;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  width: 362px;
+}
 
 @media (max-width: 991px) {
   .mission-summary-title {
@@ -940,8 +937,6 @@ body {
 
 @media (max-width: 991px) {
 }
-
-
 
 .about-section {
   display: flex;
