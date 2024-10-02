@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Website</title>
+    <title>Dailo</title>
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      function checkScreenSize() {
+        if (window.innerWidth <= 800) {
+          window.location.href = "mobile-layout.html";
+        }
+      }
+      window.onload = checkScreenSize;
+      window.onresize = checkScreenSize;
+    </script>
   </head>
   <body>
     <section class="learning-platform">
@@ -204,7 +213,10 @@
               <div class="mission-items">
                 <article class="our-mission">
                   <div class="mission-summary-text">
-                    <h2 class="mission-summary-title">Our <br> Mission</h2>
+                    <h2 class="mission-summary-title">
+                      Our <br />
+                      Mission
+                    </h2>
                     <p class="mission-summary-subtitle">
                       Revolutionizing Audio Learning
                     </p>
@@ -238,10 +250,10 @@
                       </h3>
                     </div>
                     <p class="mission-description">
-                      In a world where time is limited and screen fatigue is real,
-                      Dalio transforms passive listening into active learning. Our
-                      platform makes education accessible and enjoyable without
-                      constant screen time.
+                      In a world where time is limited and screen fatigue is
+                      real, Dalio transforms passive listening into active
+                      learning. Our platform makes education accessible and
+                      enjoyable without constant screen time.
                     </p>
                   </article>
                   <article class="mission-item">
@@ -252,9 +264,9 @@
                       </h3>
                     </div>
                     <p class="mission-description">
-                      We believe that everyone has the potential to be a lifelong
-                      learner, and our mission with Dalio is to make that journey
-                      as enjoyable and effortless as possible.
+                      We believe that everyone has the potential to be a
+                      lifelong learner, and our mission with Dalio is to make
+                      that journey as enjoyable and effortless as possible.
                     </p>
                   </article>
                 </div>

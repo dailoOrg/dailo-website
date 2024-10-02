@@ -39,7 +39,7 @@ body {
   width: 450px;
   max-width: 100%;
   z-index: 10;
-  opacity: 0;
+  
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
 }
@@ -466,6 +466,32 @@ body {
   object-fit: contain;
   object-position: center;
   width: 95px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .feature-footer-image {
+    width: 80px;
+  }
+}
+
+@media (max-width: 991px) {
+  .feature-footer-image {
+    width: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-footer-image {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-footer-image {
+    width: 50px;
+  }
 }
 
 .feature-column-2 {

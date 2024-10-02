@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dailo Mobile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile-styles.css" />
+    <script>
+      function checkScreenSize() {
+        if (window.innerWidth > 790) {
+          loadDesktopContent();
+        }
+      }
+
+      function loadDesktopContent() {
+        fetch("desktop-layout.html")
+          .then((response) => response.text())
+          .then((html) => {
+            document.documentElement.innerHTML = html;
+            // Re-run any necessary scripts for the desktop version
+            Array.from(document.querySelectorAll("script")).forEach(
+              (script) => {
+                if (!script.src) {
+                  eval(script.textContent);
+                }
+              }
+            );
+          })
+          .catch((error) =>
+            console.error("Error loading desktop content:", error)
+          );
+      }
+
+      window.addEventListener("load", checkScreenSize);
+      window.addEventListener("resize", checkScreenSize);
+    </script>
+  </head>
+  <body>
+    <nav class="navigation mobile-navigation">
+      <div class="nav-items">
+        <a href="#how-it-works" class="nav-item">How it works</a>
+        <a href="#mission" class="nav-item">Mission</a>
+        <a href="#about-us" class="nav-item">About us</a>
+        <div class="cta-button">
+          <span class="cta-text">Join waitlist</span>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-container">
+      <div class="logo-container">
+        <img
+          src="/public/photos/Logo.png"
+          alt="Dailo logo"
+          class="logo"
+          loading="lazy"
+        />
+      </div>
+
+      <aside class="banner">
+        <div class="banner-text">
+            <p>
+              Transform your downtime <br />into learning time <br />with our
+              interactive <br />
+              audio courses.
+            </p>
+          </div>
+        <div class="banner-content">
+          
+          <img
+            src="/public/photos/interactive learning.png"
+            alt="Interactive learning"
+            class="banner-image"
+            loading="lazy"
+          />
+          <img
+            src="/public/photos/learning illustration.png"
+            alt="Learning illustration"
+            class="banner-image-2"
+            loading="lazy"
+          />
+        </div>
+      </aside>
+
+      <h1 class="hero-text">
+       
+        <br /><br />
+        Dailo combines the structure of a course with the engaging style of a
+        podcast, powered by AI. Ask questions in real-time and get personalized
+        answers.
+      </h1>
+
+      <section class="features-section">
+        <div class="feature-card">
+          <h3 class="feature-title">Real time interaction</h3>
+          <p class="feature-description">
+            Ask any questions at any point during the course
+          </p>
+          <img
+            src="/public/photos/real-time-interaction.png"
+            alt="Real-time interaction"
+            class="feature-image"
+            loading="lazy"
+          />
+          <p class="feature-footer-text">
+            Receive an immediate answer without any lag.
+          </p>
+          <img
+            src="/public/photos/quick-response.png"
+            alt="Quick response"
+            class="feature-footer-image"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="feature-card">
+          <h3 class="feature-title">Flexible and mobile friendly</h3>
+          <p class="feature-description">
+            Learn during your commute, workout or any free moment.<br /><br />Zero
+            screen time required.
+          </p>
+          <img
+            src="/public/photos/mobile learning.png"
+            alt="Mobile learning"
+            class="feature-image"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="feature-card">
+          <h3 class="feature-title">Custom learning experience</h3>
+          <p class="feature-description">
+            It doesn't matter if you are a beginner or advanced learner in the
+            topic.<br /><br />Dailo learns to identify what you're most
+            interested in - and what bugs you out.<br /><br />Personalize your
+            learning time the way you want!
+          </p>
+          <img
+            src="/public/photos/custom learning.png"
+            alt="Custom learning"
+            class="feature-image"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="feature-card">
+          <h3 class="feature-title">Accessibility features</h3>
+          <p class="feature-description">
+            Audio speed adjustment: Allows users to control the playback speed
+            of course audio for a personalized listening experience.<br /><br />Transcriptions:
+            All audio courses provide text transcriptions, making it easier to
+            review and follow along.<br /><br />Multi-language support: Dalio
+            supports over 100 languages, making learning accessible for a global
+            audience.
+          </p>
+          <img
+            src="/public/photos/accessibility features.png"
+            alt="Accessibility features"
+            class="feature-image"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section id="mission" class="mission-section">
+        <div class="mission-content">
+          <div class="mission-items">
+            <article class="our-mission-mobile">
+              <h2 class="mission-summary-title">Our Mission</h2>
+              <p class="mission-summary-subtitle">
+                Revolutionizing Audio Learning
+              </p>
+              <img
+                src="/public/photos/mission illustration.png"
+                alt="Mission illustration"
+                class="mission-summary-image"
+                loading="lazy"
+              />
+            </article>
+            <article class="mission-item">
+              <span class="mission-number">I</span>
+              <h3 class="mission-title">
+                Personalizing the learning experience
+              </h3>
+              <p class="mission-description">
+                Our unique AI-powered platform allows you to interact with
+                expert-hosted discussions, asking questions and deepening your
+                understanding on the go. All customized for you.
+              </p>
+            </article>
+            <article class="mission-item">
+              <span class="mission-number">II</span>
+              <h3 class="mission-title">Innovating education through AI</h3>
+              <p class="mission-description">
+                In a world where time is limited and screen fatigue is real,
+                Dalio transforms passive listening into active learning. Our
+                platform makes education accessible and enjoyable without
+                constant screen time.
+              </p>
+            </article>
+            <article class="mission-item">
+              <span class="mission-number">III</span>
+              <h3 class="mission-title">Multiplying learning accessibility</h3>
+              <p class="mission-description">
+                We believe that everyone has the potential to be a lifelong
+                learner, and our mission with Dalio is to make that journey as
+                enjoyable and effortless as possible.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-us" class="about-section">
+        <h2 class="about-title">About us</h2>
+        <div class="about-content">
+          <p class="about-intro">
+            Dailo was born from a simple idea: learning should be accessible,
+            engaging, and fit seamlessly into our busy lives.
+          </p>
+          <p class="about-description">
+            Our team of education enthusiasts and tech innovators came together
+            to create a platform that combines the best of structured courses
+            and entertaining podcasts, all powered by cutting-edge AI
+            technology.<br /><br />We believe that everyone has the potential to
+            be a lifelong learner, and our mission is to make that journey as
+            enjoyable and effortless as possible.
+          </p>
+        </div>
+      </section>
+
+      <section class="signup-row">
+        <p class="signup-subtitle">
+          Ready to transform your learning experience?
+        </p>
+        <h2 class="signup-title">Sign up</h2>
+        <form class="signup-form">
+          <button type="submit" class="signup-button" id="waitlistInput">
+            Join waitlist
+          </button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <img
+              src="/public/photos/Logo.png"
+              alt="Dailo logo"
+              class="footer-logo"
+              loading="lazy"
+            />
+            <div class="footer-links">
+              <a href="#contact" class="footer-link">Contact Us</a>
+              <a href="#terms" class="footer-link">Terms & Privacy</a>
+            </div>
+            <p class="footer-text">© 2024 Dailo. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="overlay" id="overlay">
+      <div class="popup">
+        <h2>Join the Learning Revolution!</h2>
+        <img
+          src="/public/photos/plugging-in 1.png"
+          alt="Plugging in illustration"
+          class="popup-image"
+        />
+        <p class="popup-description">
+          Thank you for your interest in Dailo! By joining our waitlist, you'll
+          be the first to know about our latest updates and exclusive features.
+        </p>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <textarea
+            id="message"
+            placeholder="What excites you about our platform? Any specific learning needs you have? Help us tailor the Dailo experience for you!"
+            rows="4"
+          ></textarea>
+          <button type="submit">Secure My Spot</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Add the necessary JavaScript for popup functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        var overlay = document.getElementById("overlay");
+        var contactForm = document.getElementById("contactForm");
+
+        function showPopup() {
+          overlay.style.display = "block";
+        }
+
+        function hidePopup() {
+          overlay.style.display = "none";
+        }
+
+        overlay.addEventListener("click", function (event) {
+          if (event.target === this) {
+            hidePopup();
+          }
+        });
+
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+          console.log("Form submitted:", { name, email, message });
+          alert("Thank you for joining the waitlist!");
+          hidePopup();
+        });
+
+        document.querySelectorAll(".cta-button, .signup-button").forEach((button) => {
+          button.addEventListener("click", function (event) {
+            event.preventDefault();
+            showPopup();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
