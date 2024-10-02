@@ -39,7 +39,7 @@
   <body>
     <nav class="navigation mobile-navigation">
       <div class="nav-items">
-        <a href="#how-it-works" class="nav-item">How it works</a>
+        <a href="#features" class="nav-item">How it works</a>
         <a href="#mission" class="nav-item">Mission</a>
         <a href="#about-us" class="nav-item">About us</a>
         <div class="cta-button">
@@ -90,7 +90,7 @@
         answers.
       </h1>
 
-      <section class="features-section">
+      <section id="features" class="features-section">
         <div class="feature-card">
           <h3 class="feature-title">Real time interaction</h3>
           <p class="feature-description">
@@ -245,12 +245,11 @@
           </button>
         </form>
       </section>
-
       <footer class="footer">
         <div class="footer-container">
           <div class="footer-content">
             <img
-              src="./assets/Logo.png"
+              src="https://raw.githubusercontent.com/username/repository/main/assets/Logo.png"
               alt="Dailo logo"
               class="footer-logo"
               loading="lazy"
@@ -269,7 +268,7 @@
       <div class="popup">
         <h2>Join the Learning Revolution!</h2>
         <img
-          src="./assets/plugging-in-1.png"
+          src="https://raw.githubusercontent.com/username/repository/main/assets/plugging-in-1.png"
           alt="Plugging in illustration"
           class="popup-image"
         />
@@ -324,6 +323,31 @@
           button.addEventListener("click", function (event) {
             event.preventDefault();
             showPopup();
+          });
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        navItems.forEach(item => {
+          item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+              // Smooth scroll to the target element
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              
+              // Optionally, you can add a small delay to account for the fixed navigation
+              setTimeout(() => {
+                window.scrollBy(0, -60); // Adjust this value based on your navigation height
+              }, 500);
+            }
           });
         });
       });
