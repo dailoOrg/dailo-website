@@ -12,16 +12,18 @@ body {
 
 .mobile-container {
   max-width: 100%;
-  padding: 20px;
-  
+  padding: 20px 0; /* Remove horizontal padding */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .our-mission-mobile {
-  width: 50% !important;
+  width: 30% !important;
   max-width: 100%;
   margin-right: 5%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo-container {
@@ -34,7 +36,6 @@ body {
 }
 
 .logo {
-
   width: 60% !important;
   height: auto;
   max-width: 100%;
@@ -66,7 +67,6 @@ body {
   margin-bottom: 5%;
   text-align: left !important;
   right: 10px !important;
-  
 }
 
 .banner-image {
@@ -92,6 +92,11 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 20px;
+  
+}
+
+.feature-title {
+  margin-top: 0 !important;
 }
 
 .features-grid {
@@ -102,11 +107,13 @@ body {
 }
 
 .feature-card {
-  width: 300px;
-  margin-bottom: 20px;
+  width: 90%; /* Increase width to take up more space */
+  max-width: 350px; /* Set a max-width for larger screens */
+  margin: 0 auto 20px auto; /* Center the card and add bottom margin */
   background-color: #f4f4f5;
   border-radius: 20px;
   padding: 20px;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .feature-image {
@@ -115,10 +122,10 @@ body {
 }
 
 .feature-image-4 {
-    flex-direction: row;
-    width: 20%;
-    height: auto;
-  }
+  flex-direction: row;
+  width: 20%;
+  height: auto;
+}
 
 .feature-box,
 .feature-box-2,
@@ -137,6 +144,7 @@ body {
   width: 100%;
   margin-left: 0;
   margin-bottom: 20px;
+  margin-right: 0; /* Remove any potential right margin */
 }
 
 /* Center feature boxes horizontally and vertically */
@@ -144,9 +152,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding-left: 15%;
-  
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 /* Adjust for screens smaller than 300px */
@@ -154,6 +162,11 @@ body {
   .hero-image {
     display: none;
   }
+
+  .mission-summary-image {
+    width: 80%;
+  }
+  
 
   .our-mission {
     justify-content: none;
@@ -168,6 +181,7 @@ body {
   .logo-container {
     order: 1;
     margin-top: 20px;
+    margin-left: 5%; /* Changed to percentage */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -199,6 +213,7 @@ body {
     font-size: 24px;
     line-height: 1.2;
     margin-bottom: 20px;
+    margin-left: 10%; /* Changed to percentage */
   }
 
   .banner-image,
@@ -212,6 +227,7 @@ body {
     order: 3;
     width: 100%;
     text-align: center;
+    padding: 0 5% 5% 5% !important;
     margin-top: 20px;
   }
 
@@ -223,8 +239,7 @@ body {
   }
 
   .feature-card {
-    width: 300px;
-    margin-bottom: 20px;
+    width: 90%;
   }
 
   .feature-box,
@@ -284,66 +299,181 @@ body {
   }
 }
 
+@media (max-width: 300px) {
+  .footer {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+.about-intro{
+    text-align: center;
+}
+
 /* Add these styles to your existing mobile-styles.css */
 
 .mobile-navigation {
-    position: fixed;
-    bottom: 20px; /* Position at the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border-radius: 32px;
-    box-shadow: 1px 1px 6px 1px #d7d7d7;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px 10px;
-    width: 90%;
-    max-width: 450px;
-    z-index: 1000;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 32px;
+  box-shadow: 1px 1px 6px 1px #d7d7d7;
+  font: 600 1rem/30px Geist, sans-serif !important;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 10px;
+  width: 90%;
+  max-width: 450px;
+  z-index: 1000;
 }
 
 .nav-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-item {
-    text-decoration: none;
-    color: inherit;
-    padding: 5px 10px;
-    white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
+  padding: 5px 10px;
+  white-space: nowrap;
 }
 
 .cta-button {
-    background-color: #000;
-    border: none;
-    border-radius: 32px;
-    color: #fff;
-    font-size: 0.5rem;
-    padding: 0% 3% !important;
-    text-align: center;
-   
+  background-color: #000;
+  border: none;
+  border-radius: 32px;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 0% 3% !important;
+  text-align: center;
+  margin-left: 0;
+  font: 600 1rem/30px Geist, sans-serif !important;
 }
 
 /* Responsive adjustments */
-@media (max-width: 400px) {
-    .mobile-navigation {
-        font-size: 0.7rem;
-        padding: 3px 8px;
-    }
+@media (max-width: 480px) {
+  .mobile-navigation {
+    font-size: 0.9rem !important;
+    padding: 3px 8px;
+  }
 
-    .nav-item {
-        padding: 3px 6px;
-    }
+  .nav-item {
+    padding: 3px 6px;
+  }
 
-    .cta-button {
-        font-size: 0.7rem;
-        padding: 3px 10px;
-    }
+  .cta-button {
+    font-size: 0.9rem !important;
+    padding: 3px 10px;
+  }
 }
 
-/* Rest of your existing styles... */
+@media (max-width: 415px) {
+  .mobile-navigation {
+    font-size: 0.9rem !important;
+    padding: 3px 4px;
+  }
+
+  .nav-item {
+    padding: 3px 6px;
+  }
+
+  .cta-button {
+    font-size: 0.9rem !important;
+    padding: 0% 2% !important;
+    padding: 2px 5px;
+  }
+}
+
+@media (max-width: 395px) {
+  .mobile-navigation {
+    font-size: 0.8rem !important;
+    padding: 3px 4px;
+  }
+
+  .nav-item {
+    padding: 3px 6px;
+  }
+
+  .cta-button {
+    font-size: 0.8rem !important;
+    padding: 2px 7px;
+  }
+}
+
+@media (max-width: 333px) {
+  .mobile-navigation {
+    font-size: 0.7rem !important;
+    padding: 3px 4px;
+  }
+
+  .nav-item {
+    padding: 3px 6px;
+  }
+
+  .cta-button {
+    font-size: 0.7rem !important;
+    padding: 0% 2% !important;
+    padding: 2px 7px;
+  }
+}
+
+@media (max-width: 295px) {
+  .mobile-navigation {
+    font-size: 0.65rem !important;
+    padding: 3px 4px;
+  }
+
+  .nav-item {
+    padding: 3px 6px;
+  }
+
+  .cta-button {
+    font-size: 0.65rem !important;
+    padding: 2px 7px;
+  }
+}
+
+@media (max-width: 276px) {
+  .mobile-navigation {
+    font-size: 0.6rem !important;
+    padding: 3px 4px;
+  }
+
+  .nav-item {
+    padding: 3px 6px;
+  }
+
+  .cta-button {
+    font-size: 0.6rem !important;
+    padding: 2px 7px;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* New styles for screens between 800px and 600px */
+@media (min-width: 550px) and (max-width: 800px) {
+  .features-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature-card {
+    width: calc(50% - 20px); /* 50% width minus some space for gap */
+    margin: 10px;
+    max-width: none;
+  }
+}

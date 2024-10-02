@@ -59,14 +59,13 @@
 
       <aside class="banner">
         <div class="banner-text">
-            <p>
-              Transform your downtime <br />into learning time <br />with our
-              interactive <br />
-              audio courses.
-            </p>
-          </div>
+          <p>
+            Transform your downtime <br />into learning time <br />with our
+            interactive <br />
+            audio courses.
+          </p>
+        </div>
         <div class="banner-content">
-          
           <img
             src="https://raw.githubusercontent.com/dailoOrg/website/main/public/photos/interactive learning.png"
             alt="Interactive learning"
@@ -83,7 +82,6 @@
       </aside>
 
       <h1 class="hero-text">
-       
         <br /><br />
         Dailo combines the structure of a course with the engaging style of a
         podcast, powered by AI. Ask questions in real-time and get personalized
@@ -155,15 +153,15 @@
             supports over 100 languages, making learning accessible for a global
             audience.
           </p>
-          <div style="display: flex; justify-content: flex-end;">
-          <img
-            src="https://raw.githubusercontent.com/dailoOrg/website/main/public/photos/accessibility features.png"
-            alt="Accessibility features"
-            class="feature-image-4"
-            loading="lazy"
-            style="margin-left: auto;"
-          />
-        </div>
+          <div style="display: flex; justify-content: flex-end">
+            <img
+              src="https://raw.githubusercontent.com/dailoOrg/website/main/public/photos/accessibility features.png"
+              alt="Accessibility features"
+              class="feature-image-4"
+              loading="lazy"
+              style="margin-left: auto"
+            />
+          </div>
         </div>
       </section>
 
@@ -171,7 +169,7 @@
         <div class="mission-content">
           <div class="mission-items">
             <article class="our-mission-mobile">
-              <h2 class="mission-summary-title">Our Mission</h2>
+              <h2 class="mission-summary-title">Our <br>Mission</h2>
               <p class="mission-summary-subtitle">
                 Revolutionizing Audio Learning
               </p>
@@ -249,7 +247,7 @@
         <div class="footer-container">
           <div class="footer-content">
             <img
-              src="https://raw.githubusercontent.com/username/repository/main/assets/Logo.png"
+              src="https://raw.githubusercontent.com/dailoOrg/website/main/public/photos/Logo.png"
               alt="Dailo logo"
               class="footer-logo"
               loading="lazy"
@@ -268,7 +266,7 @@
       <div class="popup">
         <h2>Join the Learning Revolution!</h2>
         <img
-          src="https://raw.githubusercontent.com/username/repository/main/assets/plugging-in-1.png"
+          src="https://raw.githubusercontent.com/dailoOrg/website/main/public/photos/plugging-in 1.png"
           alt="Plugging in illustration"
           class="popup-image"
         />
@@ -319,30 +317,32 @@
           hidePopup();
         });
 
-        document.querySelectorAll(".cta-button, .signup-button").forEach((button) => {
-          button.addEventListener("click", function (event) {
-            event.preventDefault();
-            showPopup();
+        document
+          .querySelectorAll(".cta-button, .signup-button")
+          .forEach((button) => {
+            button.addEventListener("click", function (event) {
+              event.preventDefault();
+              showPopup();
+            });
           });
-        });
       });
 
-      document.addEventListener('DOMContentLoaded', function() {
-        const navItems = document.querySelectorAll('.nav-item');
-        
-        navItems.forEach(item => {
-          item.addEventListener('click', function(e) {
+      document.addEventListener("DOMContentLoaded", function () {
+        const navItems = document.querySelectorAll(".nav-item");
+
+        navItems.forEach((item) => {
+          item.addEventListener("click", function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
+            const targetId = this.getAttribute("href");
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
               // Smooth scroll to the target element
               targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                behavior: "smooth",
+                block: "start",
               });
-              
+
               // Optionally, you can add a small delay to account for the fixed navigation
               setTimeout(() => {
                 window.scrollBy(0, -60); // Adjust this value based on your navigation height
