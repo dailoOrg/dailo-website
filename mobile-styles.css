@@ -163,9 +163,19 @@ body {
     display: none;
   }
 
+  .mission-items{
+    margin-left: 40px !important;
+    gap: 40px 30px !important;
+  }
+
   .mission-summary-image {
     width: 80%;
   }
+
+  .mission-summary-title {
+    margin-bottom: 40% !important;
+  }
+
   
 
   .our-mission {
@@ -281,6 +291,13 @@ body {
   .signup-title {
     text-align: center;
   }
+
+  .about-title {
+    margin-bottom: 0 !important;
+  }
+  .signup-row {
+    margin-bottom: 80px !important;
+  }
 }
 
 @media (max-width: 375px) {
@@ -308,6 +325,7 @@ body {
 
 .about-intro{
     text-align: center;
+    font: 800 30px / 36px Inter, sans-serif;
 }
 
 /* Add these styles to your existing mobile-styles.css */
