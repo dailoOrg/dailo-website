@@ -93,7 +93,6 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 20px;
-  
 }
 
 .feature-title {
@@ -180,7 +179,7 @@ body {
   .hero-image {
     display: none;
   }
-  .mission-section{
+  .mission-section {
     margin-top: 100px !important;
   }
   .mission-description {
@@ -204,7 +203,7 @@ body {
     margin-top: 10px !important;
   }
 
-  .mission-items{
+  .mission-items {
     margin-left: 40px !important;
     gap: 40px 30px !important;
   }
@@ -216,8 +215,6 @@ body {
   .mission-summary-title {
     margin-bottom: 40% !important;
   }
-
-  
 
   .our-mission {
     justify-content: none;
@@ -364,9 +361,9 @@ body {
   }
 }
 
-.about-intro{
-    text-align: center;
-    font: 800 30px / 36px Inter, sans-serif;
+.about-intro {
+  text-align: center;
+  font: 800 30px / 36px Inter, sans-serif;
 }
 
 /* Add these styles to your existing mobile-styles.css */
@@ -542,7 +539,7 @@ html {
   .mobile-navigation {
     bottom: max(env(safe-area-inset-bottom, 20px), 20px);
   }
-  
+
   body {
     padding-bottom: max(calc(80px + env(safe-area-inset-bottom, 20px)), 100px);
   }
