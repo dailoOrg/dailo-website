@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Geist, sans-serif;
+  padding-bottom: calc(80px + env(safe-area-inset-bottom)); /* Adjust the 80px value as needed */
 }
 
 .hero-image {
@@ -157,10 +158,50 @@ body {
   margin: 0;
 }
 
+.mission-description {
+  font-size: 16px !important;
+}
+
+/* Add specificity and ensure this rule is not being overridden */
+.mission-item .mission-description {
+  font-size: 16px !important;
+}
+
+/* Use media query to target mobile screens */
+@media (max-width: 768px) {
+  .mission-description,
+  .mission-item .mission-description {
+    font-size: 16px !important;
+  }
+}
+
 /* Adjust for screens smaller than 300px */
 @media (max-width: 800px) {
   .hero-image {
     display: none;
+  }
+  .mission-section{
+    margin-top: 100px !important;
+  }
+  .mission-description {
+    font-size: 16px !important;
+  }
+
+  /* Increase specificity */
+  .mission-item .mission-description {
+    font-size: 16px !important;
+  }
+
+  /* Ensure it applies to all mission descriptions */
+  .mission-items .mission-description {
+    font-size: 16px !important;
+  }
+
+  /* Use !important on all properties to override any conflicting styles */
+  .mission-description {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin-top: 10px !important;
   }
 
   .mission-items{
@@ -169,7 +210,7 @@ body {
   }
 
   .mission-summary-image {
-    width: 80%;
+    width: 100%;
   }
 
   .mission-summary-title {
@@ -332,6 +373,7 @@ body {
 
 .mobile-navigation {
   position: fixed;
+  bottom: calc(20px + env(safe-area-inset-bottom)); /* Use env() for iOS safe area */
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;

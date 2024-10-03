@@ -924,7 +924,7 @@ body {
   }
   .mission-summary-subtitle,
   .mission-description {
-    font-size: 16px;
+    font-size: 16px ;
   }
   .mission-number {
     font-size: 28px;
@@ -940,7 +940,7 @@ body {
   }
   .mission-summary-subtitle,
   .mission-description {
-    font-size: 14px;
+    font-size: 14px !important;
   }
   .mission-number {
     font-size: 24px;
