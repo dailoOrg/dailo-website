@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Geist, sans-serif;
-  padding-bottom: calc(80px + env(safe-area-inset-bottom)); /* Adjust the 80px value as needed */
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 20px));
 }
 
 .hero-image {
@@ -373,7 +373,7 @@ body {
 
 .mobile-navigation {
   position: fixed;
-  bottom: calc(20px + env(safe-area-inset-bottom)); /* Use env() for iOS safe area */
+  bottom: env(safe-area-inset-bottom, 20px);
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;
@@ -535,5 +535,15 @@ html {
     width: calc(50% - 20px); /* 50% width minus some space for gap */
     margin: 10px;
     max-width: none;
+  }
+}
+
+@supports (padding: max(0px)) {
+  .mobile-navigation {
+    bottom: max(env(safe-area-inset-bottom, 20px), 20px);
+  }
+  
+  body {
+    padding-bottom: max(calc(80px + env(safe-area-inset-bottom, 20px)), 100px);
   }
 }
