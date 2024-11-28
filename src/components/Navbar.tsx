@@ -19,7 +19,7 @@ export default function Navbar() {
 
           {/* Button */}
           <a
-            href="#"
+            href="https://app.dailo.org"
             className="rounded-full bg-black text-white hover:bg-gray-800 transition-colors px-4 py-2 text-sm font-medium"
           >
             Start Listening

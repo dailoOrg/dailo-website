@@ -17,7 +17,7 @@ const podcasts: Podcast[] = [
     description: "Exploring the latest developments in artificial intelligence, machine learning, and their real-world applications",
     episodes: 10,
     image: "/img/01.png",
-    url: "#"
+    url: "https://app.dailo.org"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const podcasts: Podcast[] = [
     description: "Understanding blockchain technology, cryptocurrencies, and their impact on the future of finance",
     episodes: 10,
     image: "/img/02.png",
-    url: "#"
+    url: "https://app.dailo.org"
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const podcasts: Podcast[] = [
     description: "Diving deep into the Internet Computer Protocol and its revolutionary approach to cloud computing",
     episodes: 10,
     image: "/img/03.png",
-    url: "#"
+    url: "https://app.dailo.org"
   }
 ];
 
