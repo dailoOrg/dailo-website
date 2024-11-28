@@ -51,11 +51,9 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export function generateViewport() {
-  return {
-    width: 'device-width',
-    initialScale: 1,
-  }
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -64,8 +62,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="antialiased">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+      <body className="antialiased" suppressHydrationWarning>
         <Navbar />
         {children}
       </body>
