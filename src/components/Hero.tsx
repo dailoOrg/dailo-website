@@ -6,7 +6,7 @@ export default function Hero() {
           <span>Transform Your Downtime</span> <br className="hidden sm:block" />
           <span>into Learning Time with Dailo</span>
           <br />
-          <span className="opacity-50">Interactive AI-Powered <br className="sm:hidden" /> Podcasts</span>
+          <span className="opacity-50">Interactive AI-Powered <br className="sm:hidden" /> Podcasts </span>
           <br className="hidden sm:block" />
           <span className="opacity-50">as a Learning Experience</span>
         </h1>

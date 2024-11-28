@@ -45,7 +45,7 @@ export default function Features() {
     {
       number: "2",
       title: "Casual Audio Learning",
-      description: "Combining the ease of podcast listening with structured learning for effective, enjoyable skill development.",
+      description: "Combining the ease of podcast listening with structured learning for effective, enjoyable skill development",
       y: y2
     },
     {
